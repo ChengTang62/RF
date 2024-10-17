@@ -142,10 +142,9 @@ def control(feature_file, result_file, test_file):
 
 
 def main():
-    # TODO: change the data file path
-    defense = 'Undefened'
-    feature_file = 'dataset/' + defense + '.npy'
-    result_file = 'result/' + defense + '-{}.csv'
+    defense = 'Undefended'
+    feature_file = 'RF/dataset/' + defense + '.npy'
+    result_file = 'RF/result/' + defense + '-{}.csv'
     res_anaFile = result_file[:-4] + '_ana.csv'
     test_file = result_file[:-4] + '_test.txt'
 
@@ -157,6 +156,4 @@ def main():
 
 
 if __name__ == '__main__':
-    start = time.time()
     main()
-    print(time.time() - start)
