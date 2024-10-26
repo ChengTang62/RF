@@ -8,7 +8,12 @@ import multiprocessing as mp
 import pandas as pd
 from importlib import import_module
 import tqdm
+import sys
+from os.path import join, dirname, abspath, pardir
 
+# Add the RF directory to PYTHONPATH
+BASE_DIR = abspath(join(dirname(__file__), pardir))
+sys.path.append(BASE_DIR)
 
 def parallel(para_list, n_jobs=1):
     pool = mp.Pool(n_jobs)
